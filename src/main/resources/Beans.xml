@@ -3,18 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userService" class="com.kudiukin.homework1.service.UserService">
+    <bean id="userService" class="com.kudiukin.homework1.service.UserServiceImpl">
         <property name="user" ref="user"/>
     </bean>
 
     <bean id="user" class="com.kudiukin.homework1.User">
     </bean>
 
-    <bean id="fileReader" class="com.kudiukin.homework1.service.FileReader" init-method="readResource">
+    <bean id="fileReader" class="com.kudiukin.homework1.service.FileReaderImpl" init-method="readResource">
         <property name="resource" value="questions.csv"/>
     </bean>
 
-    <bean id="quizService" class="com.kudiukin.homework1.service.QuizService">
+    <bean id="quizService" class="com.kudiukin.homework1.service.QuizServiceImpl">
         <property name="fileReader" ref="fileReader"/>
         <property name="user" ref="user"/>
     </bean>
