@@ -3,11 +3,13 @@ package com.kudiukin.homework1.service;
 import com.kudiukin.homework1.User;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
 @Getter
 @Setter
+@Service
 public class UserServiceImpl implements UserService {
 
     private User user;
@@ -28,7 +30,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public boolean checkUser() {
+    public Boolean checkUser() {
         return !user.getName().isEmpty() && !user.getSurname().isEmpty();
         }
 }

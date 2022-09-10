@@ -1,16 +1,23 @@
 package com.kudiukin.homework1.service;
 
+import com.kudiukin.homework1.FileReader;
 import com.kudiukin.homework1.User;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Scanner;
 
 @Getter
 @Setter
+@Service
 public class QuizServiceImpl implements QuizService{
-    private FileReaderImpl fileReader;
+
+    @Autowired
+    private FileReader fileReader;
+    @Autowired
     private User user;
     private int score;
     private int number;

@@ -4,5 +4,5 @@ public interface UserService {
 
     void askUserNameAndSurname();
 
-    boolean checkUser();
+    Boolean checkUser();
 }

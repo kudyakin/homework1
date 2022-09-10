@@ -10,7 +10,7 @@
     <bean id="user" class="com.kudiukin.homework1.User">
     </bean>
 
-    <bean id="fileReader" class="com.kudiukin.homework1.service.FileReaderImpl" init-method="readResource">
+    <bean id="fileReader" class="com.kudiukin.homework1.FileReader" init-method="readResource">
         <property name="resource" value="questions.csv"/>
     </bean>
 
